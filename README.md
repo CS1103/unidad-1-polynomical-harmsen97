@@ -1,1 +1,1 @@
-# Polinomial
+# Polynomial
