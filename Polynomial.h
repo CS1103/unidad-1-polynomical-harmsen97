@@ -1,15 +1,30 @@
-//
-// Created by ruben on 9/12/2019.
-//
+#ifndef PC_JERONIMO_POLYNOMIAL_H
+#define PC_JERONIMO_POLYNOMIAL_H
 
-#ifndef POLINOMIO_POLINOMIO_H
-#define POLINOMIO_POLINOMIO_H
 
-#include <vector>
-using namespace std;
+#include "Term.h"
 
 class Polynomial {
+public:
+    Term* inicial;
+    Term* final;
 
+    Polynomial();
+    void add_term(float, int);
+    int grade();
+    Polynomial copy();
+    Polynomial operator+(Polynomial&);
+    Polynomial operator+(float);
+    void operator+=(Polynomial&);
+    void operator+=(float);
+
+    Polynomial operator*(Polynomial&);
+    Polynomial operator*(float);
+    void operator*=(float);
+
+    Polynomial operator^(int);
+
+    void print();
 };
 
-#endif //POLINOMIO_POLINOMIO_H
+#endif //PC_JERONIMO_POLYNOMIAL_H

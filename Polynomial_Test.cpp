@@ -1,5 +1,6 @@
 #include <sstream>
 #include "Polynomial.h"
+
 #include "catch.hpp"
 
 using namespace std;
