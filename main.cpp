@@ -1,27 +1,65 @@
-#include "Polynomial.h"
 #include <iostream>
-
-int main() {
-    Polynomial p, p2,p3;
-
-    p.add_term(3,0);
-    p.add_term(1,1);
-    p.add_term(3,3);
-    //p.add_term(5,5);
-
-    p2.add_term(1,0);
-    p2.add_term(1,1);
-    p2.add_term(6,6);
-
-    Polynomial power = p^2;
+#include <vector>
+#include <deque>
+#include <list>
 
 
-p3 = p * p2;
+#include "Sort.h"
+#include "auxFunctions.h"
+
+int main(){
+//con quicksort
+    std::vector<int> vec1 = {9,8,7,6,5,4,3,2,1,0,10,20,44,12};
+    Sort <int> A(vec1);
+    A.print();
+    std::cout<<std::fixed<<std::setprecision(6)<<stopWatchQuick(A)<<std::endl;
+    A.print();
 
 
 
-    power.print();
+
+
     std::cout<<std::endl;
-    p3.print();
+
+
+
+
+    //con mergesort
+    std::vector<int> vec2 = {9,8,7,6,5,4,3,2,1,0,10,20,44,12};
+    Sort <int> B(vec2);
+    B.print();
+    std::cout<<std::fixed<<std::setprecision(6)<<stopWatchMerge(B)<<std::endl;
+    B.print();
+
+
+
+    std::cout<<std::endl;
+
+
+
+
+    std::vector<int> vec3 = {9,8,7,6,5,4,3,2,1,0,10,20,44,12};
+    Sort <int> C(vec3);
+    C.print();
+    std::cout<<std::fixed<<std::setprecision(6)<<stopWatchMerge(C)<<std::endl;
+    C.print();
+
+
+
+    std::cout<<std::endl;
+
+
+
+
+    std::vector<int> vec4 = {9,8,7,6,5,4,3,2,1,0,10,20,44,12};
+    Sort <int> D(vec4);
+    D.print();
+    std::cout<<std::fixed<<std::setprecision(6)<<stopWatchMerge(D)<<std::endl;
+    D.print();
+//utilizar iteradores
+//necesita recibir archivos
+
+
+
     return 0;
 }
